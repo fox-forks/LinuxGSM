@@ -39,7 +39,7 @@ fn_update_remotebuild() {
 	remotebuildresponse=$(curl -s "${apiurl}")
 	remotebuildfilename="multitheftauto_linux_x64.tar.gz"
 	remotebuildurl="http://linux.mtasa.com/dl/multitheftauto_linux_x64.tar.gz"
-	remotebuildversion=$(echo "${remotebuildresponse}")
+	remotebuildversion=${remotebuildresponse}
 	if [ "${firstcommandname}" != "INSTALL" ]; then
 		fn_print_dots "Checking remote build: ${remotelocation}"
 		# Checks if remotebuildversion variable has been set.
